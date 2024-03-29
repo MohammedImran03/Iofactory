@@ -14,26 +14,26 @@
         <div class="label">Enter Your Water Tank Units</div>
         <input id="display" readonly />
         <div class="clear-back-btn">
-        <button class="clear-button" onclick="clearDisplay()">Clear</button>
-        <button class="clear-button" onclick="backspace()">Back</button>
+        <button class="clear-button" onclick="ClearDisplayValues()">Clear</button>
+        <button class="clear-button" onclick="BackSpaceValues()">Back</button>
     </div>
         <div class="input-container">
             
             <div class="number">
-                <button onclick="appendToDisplay('1')">1</button>
-                <button onclick="appendToDisplay('2')">2</button>
-                <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('4')">4</button>
-                <button onclick="appendToDisplay('5')">5</button>
-                <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('7')">7</button>
-                <button onclick="appendToDisplay('8')">8</button>
-                <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="PutInputValues('1')">1</button>
+                <button onclick="PutInputValues('2')">2</button>
+                <button onclick="PutInputValues('3')">3</button>
+                <button onclick="PutInputValues('4')">4</button>
+                <button onclick="PutInputValues('5')">5</button>
+                <button onclick="PutInputValues('6')">6</button>
+                <button onclick="PutInputValues('7')">7</button>
+                <button onclick="PutInputValues('8')">8</button>
+                <button onclick="PutInputValues('9')">9</button>
+                <button onclick="PutInputValues('0')">0</button>
             </div>
            
         </div>
-        <button onclick="getValues()">Get Values</button>
+        <button class="getallbtn" onclick="GetValues()">Get Values</button>
             <div id="blocks-container"></div>
             <div id="total-units"></div>
     </div>

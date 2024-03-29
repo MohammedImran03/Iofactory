@@ -1,27 +1,27 @@
 let inputValues = [];
 
-function appendToDisplay(value) {
+function PutInputValues(value) {
     document.getElementById('display').value += value;
 }
 
-function clearDisplay() {
+function ClearDisplayValues() {
     document.getElementById('display').value = '';
 }
 
-function backspace() {
+function BackSpaceValues() {
     let displayValue = document.getElementById('display').value;
     document.getElementById('display').value = displayValue.slice(0, -1);
 }
 
-function getValues() {
+function GetValues() {
     let displayValue = document.getElementById('display').value;
     let digits = displayValue.split('').map(Number);
-    inputValues = adjustValues(digits); 
-    displayBlocks();
-    displayUnits();
+    inputValues = GetWaterUnitsValues(digits); 
+    DisplayBuildingBlocks();
+    displaywaterUnits();
 }
 
-function adjustValues(digits) {
+function GetWaterUnitsValues(digits) {
     let adjustedValues = [];
     let currentValue = digits[0];
     for (let i = 1; i < digits.length; i++) {
@@ -46,7 +46,7 @@ function adjustValues(digits) {
     return adjustedValues;
 }
 
-function displayBlocks() {
+function DisplayBuildingBlocks() {
     let blocksContainer = document.getElementById('blocks-container');
     blocksContainer.innerHTML = ''; 
 
@@ -54,17 +54,17 @@ function displayBlocks() {
         let block = document.createElement('div');
         block.className = 'block';
         block.style.height = value * 10+ 'px';
-        block.style.backgroundColor = getColor(value);
+        block.style.backgroundColor = GetRandomColor(value);
         blocksContainer.appendChild(block);
     });
 }
 
-function getColor(value) {
+function GetRandomColor(value) {
     let color = value * 10; 
     return `hsl(${color}, 70%, 50%)`;
 }
 
-function displayUnits() {
+function displaywaterUnits() {
     let totalUnits = inputValues.reduce((acc, cur) => acc + cur, 0);
     document.getElementById('total-units').innerText = `Total Units: ${totalUnits}`;
 }
