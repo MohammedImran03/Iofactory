@@ -112,9 +112,10 @@ function displaywaterUnits(digits) {
     let totalUnits = inputValues.reduce((acc, cur) => acc + cur, 0);
     // console.log(totalUnits,inputValues);
     if(!digits.length){
-        document.getElementById('total-units').innerText = `Please Enter the units.`;
+        document.getElementById('total-units').innerText = `Please Enter The Water units.`;
     }else{
-        document.getElementById('total-units').innerText = `Total Water Units: ${Total_Water_Units}`;
+        document.getElementById('total-units').innerHTML = `Total Water Units: <span style="font-weight: bold; font-size: 50px; color:blue;">${Total_Water_Units}</span>`;
+
     }
 
 }
