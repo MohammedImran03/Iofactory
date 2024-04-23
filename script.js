@@ -103,8 +103,6 @@ function TotalUnits_Calculations(digits) {
     return maxUnits;
 }
 
-
-
 function displaywaterUnits(digits) {
     const Total_Water_Units=TotalUnits_Calculations(digits);
     console.log(digits);
@@ -117,5 +115,4 @@ function displaywaterUnits(digits) {
         document.getElementById('total-units').innerHTML = `Total Water Units: <span style="font-weight: bold; font-size: 50px; color:blue;">${Total_Water_Units}</span>`;
 
     }
-
 }
